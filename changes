@@ -1,0 +1,79 @@
+ REPLACE viewBookings with:
+ 
+    <div ng-show="viewBookings">
+            <table style="width:100%">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Pickup</th>
+                    <th>Drop Off</th>
+                    <th>Vehicle ID</th>
+                    <th>Current Passenger</th>
+                </tr>
+                <tr ng-repeat="booking in bookings">
+                    <td>{{booking.Id}}</td>
+                    <td>{{booking.PassengerName}}</td>
+                    <td>{{booking.PickupLocation}}</td>
+                    <td>{{booking.DropOffLocation}}</td>
+                    <td>{{booking.VehicleId}}</td>
+                    <td>{{booking.CurrentPassenger}}</td>
+                    <td><a href="" ng-click="remove(booking.Id)">Remove</a></td>
+                    </tr>
+            </table>
+      </div>
+
+Create stylesheet called 'stylesheet' in folder called assets.
+add to top of page: <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
+
+add to stylesheet:
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #AC145A;
+    border: none;
+    border-radius: 15px;
+}
+
+    button:hover {
+        background-color: #E31C79
+    }
+
+    button:active {
+        background-color: #E31C79;
+        box-shadow: 0 5px #8D8D8D;
+        transform: translateY(2px);
+    }
+
+h1 {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #242424;
+}
+
+table, th, td {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border: 1px solid black;
+}
+
+h2 {
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    color: #242424;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    color: #242400;
+    padding: 20px;
+}
+
